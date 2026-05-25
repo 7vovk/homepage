@@ -66,6 +66,11 @@
     .experiences {
       margin-right: 0;
     }
+
+    .intro-wrapper {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   /* Contact info styles */
@@ -133,9 +138,21 @@
 }
 
 /* Intro and skills styles */
-.intro {
+.intro-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+  }
+
+  .intro-wrapper .contact-info__avatar {
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  .intro {
     display: flex;
     justify-content: start;
+    flex: 1;
   }
   
   .intro__icon-wrapper {
@@ -143,6 +160,7 @@
     width: 30px;
     display: flex;
     justify-content: center;
+    flex-shrink: 0;
   }
   
   .intro__icon {
@@ -164,10 +182,21 @@
     text-align: center;
     margin-bottom: 15px;
   }
+
+  .skills__category {
+    margin-bottom: 10px;
+  }
+
+  .skills__category-header {
+    color: var(--primary-text-color);
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
   
   .skills__text {
     color: var(--secondary-text-color);
     text-align: justify;
+    font-size: 14px;
   }
 
   /* Experience and additional info styles */
@@ -262,5 +291,19 @@
   }
   
   .additional-info__languages-item {
+    color: var(--secondary-text-color);
+  }
+
+  .additional-info__interests {
+    margin-bottom: 20px;
+  }
+
+  .additional-info__interests-header {
+    color: var(--secondary-text-color);
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  .additional-info__interests-item {
     color: var(--secondary-text-color);
   }
